@@ -9,7 +9,9 @@ csv_reader =csv.DictReader(csv_file)
 
 new_file = open('new_names.csv', 'w')
 fieldnames = ['first_name', 'last_name', 'email']
-csv_writer = csv.DictWriter(new_file, delimiter='\t')
+csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames, delimiter='\t')
+
+csv_writer.writeheader()
 
 for line in csv_reader:
     csv_writer.writerow(line)
