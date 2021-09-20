@@ -1,7 +1,7 @@
 import csv
 
 csv_file = open('attendees1.csv')
-
+# example of reading without context manager, and a specific dilimiter
 csv_reader = csv.reader(csv_file, delimiter=',')
 line_count = 0
 

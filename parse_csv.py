@@ -1,6 +1,8 @@
 import csv
 # opening with context manager, automatic close when block ends
 with open('attendees1.csv', 'r') as csv_file:
+    # using the DictReader will read csv/txt data to a dictionary format, 
+    # and give ability to use keys instead of index 
     csv_reader =csv.DictReader(csv_file)
 
     for line in csv_reader:
